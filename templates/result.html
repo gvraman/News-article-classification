@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			NLP App
+		</div>
+		<h2>Classification of News Articles to their respective Publication House</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 0%}
+	<h2 style="color:red;">Breitbart</h2>
+	{% elif prediction == 1%}
+	<h2 style="color:red;">New York Post</h2>
+	{% elif prediction == 2%}
+	<h2 style="color:red;">NPR</h2>
+	{% elif prediction == 3%}
+	<h2 style="color:red;">CNN</h2>
+	{% elif prediction == 4%}
+	<h2 style="color:red;">Washington Post</h2>
+	{% elif prediction == 5%}
+	<h2 style="color:red;">Reuters</h2>
+	{% elif prediction == 6%}
+	<h2 style="color:red;">Guardian</h2>
+	{% elif prediction == 7%}
+	<h2 style="color:red;">New York Times</h2>
+	{% elif prediction == 8%}
+	<h2 style="color:red;">Atlantic</h2>
+	{% elif prediction == 9%}
+	<h2 style="color:red;">Business Insider</h2>
+	{% elif prediction == 10%}
+	<h2 style="color:red;">National Review</h2>
+	{% elif prediction == 11%}
+	<h2 style="color:red;">Talking Points Memo</h2>
+	{% elif prediction == 12%}
+	<h2 style="color:red;">Vox</h2>
+	{% elif prediction == 13%}
+	<h2 style="color:red;">Buzzfeed News</h2>
+	{% elif prediction == 14%}
+	<h2 style="color:red;">Fox News</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
